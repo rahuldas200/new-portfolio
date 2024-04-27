@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
 import { Link } from "react-scroll"
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 const NavBar = () => {
 
@@ -29,9 +31,9 @@ const NavBar = () => {
         }
     ]
     return (
-        <div className='flex justify-between items-center w-full h-20 px-4 text-white bg-gradient-to-b from-gray-800 to-black'>
-            <div className='flex flex-row gap-1'>
-                <h3 className='text-4xl font-itim ml-4'>@codewithrahul</h3>
+        <div data-aos="fade-in" data-aos-duration="500" className='flex justify-between items-center w-full h-20 px-4 text-white bg-gradient-to-b from-gray-800 to-black'>
+            <div className='flex flex-row gap-1 '>
+                <h3 className='text-4xl font-itim ml-4 max-sm:ml-0 max-sm:text-2xl'>CodeWithRahul</h3>
             </div>
 
             <ul className='hidden md:flex'>
@@ -43,8 +45,8 @@ const NavBar = () => {
                 ))}
             </ul>
 
-            <div onClick={() => setNav(!nav)} className='md:hidden cursor-pointer pr-4 z-60'>
-                {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
+            <div onClick={() => setNav(!nav)} className='md:hidden cursor-pointer pr-4 max-sm:pr-0 z-60'>
+                {nav ? <FaTimes size={20} /> : <FaBars size={20} />}
             </div>
             {
                 nav && (

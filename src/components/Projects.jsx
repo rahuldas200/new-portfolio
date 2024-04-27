@@ -65,7 +65,7 @@ const Projects = () => {
           <h2 className='text-4xl font-bold inline border-b-4 border-gray-400'>Projects</h2>
           <p className='py-6'>Check out some of my work </p>
         </div>
-        <div   className='grid sm:grid-cols-2 md:grid-cols-3 mb-20 gap-8 px-12 sm:px-0 items-center'>
+        <div   className='grid sm:grid-cols-2 md:grid-cols-3 mb-20 gap-8  sm:px-0 items-center'>
           {
             Projects().map(({ id, src, desc, demo, code }) => (
 
