@@ -9,12 +9,12 @@ import { HiOutlineMail } from 'react-icons/hi'
 import { BsGithub, BsInstagram, BsLinkedin } from 'react-icons/bs'
 import { TypeAnimation } from 'react-type-animation';
 
-const Home = () => {
+const Home = ({dis,css}) => {
     useEffect(()=> {
         AOS.init({duration: 1000})
     })
     return (
-        <div name="home" className='h-auto w-full bg-black '>
+        <div name="home" className={`h-auto w-full bg-black  z-1`}>
             <div className='max-w-screen-lg mx-auto flex flex-col items-center
                             justify-center  px-4 md:flex-row text-white'>
                 <div className='flex flex-col '>
@@ -25,17 +25,17 @@ const Home = () => {
                     <div className='flex justify-center items-center flex-col mt-3'>
                         <h2 data-aos="fade-in" data-aos-duration="1000" className='text-4xl sm:text-6xl text-center font-bold text-white'>
                              <TypeAnimation
-                            sequence={[
-                                // Same substring at the start will only be typed out once, initially
-                                'Full-Stack Developer',
-                                2000, // wait 1s before replacing "Mice" with "Hamsters"
-                                'Aske me about MERN Stack',
-                                2000,
-                                'Fontend Developer',
-                                2000,
-                                'Final year B tech Student',
-                                2000
-                            ]}
+                                sequence={[
+                                    // Same substring at the start will only be typed out once, initially
+                                    'Full-Stack Developer',
+                                    2000, // wait 1s before replacing "Mice" with "Hamsters"
+                                    'Frontend Developer',
+                                    2000,                                
+                                    'Final year B tech Student',
+                                    2000,                                   
+                                    'Ask me about MERN Stack',
+                                    2000
+                                ]}
                             wrapper="span"
                             speed={50}
                             style={{ fontSize: '1em', display: 'inline-block' }}

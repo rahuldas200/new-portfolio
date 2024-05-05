@@ -18,7 +18,17 @@ const Education = () => {
                 
             </div>
             <div  className='flex flex-col flex-wrap'>
-                <div data-aos="fade-right" data-aos-delay="1000" data-aos-duration="2000">
+                <div data-aos="fade-right" data-aos-delay="100" data-aos-duration="2000">
+                    <SimpleExampleTextComponent
+                        isIntersecting={true}
+                        title="B tech in Computer Science and Engineering"
+                        collageName="Netaji Subash Engineering Collage"
+                        passoutYear = "2021 Aug - 2024 Jun"
+                        CGP = "8.32"
+                    />
+                    
+                </div>
+                <div data-aos="fade-right" data-aos-delay="100" data-aos-duration="2000">
                     <SimpleExampleTextComponent
                         isIntersecting={true}
                         title="Diploma in Computer Science and Technolodgy"
@@ -27,56 +37,7 @@ const Education = () => {
                         CGP = "7.7"
                     />
                 </div>
-                <div data-aos="fade-right" data-aos-delay="1000" data-aos-duration="2000">
-                    <SimpleExampleTextComponent
-                        isIntersecting={true}
-                        title="B tech in computer science and engineering"
-                        collageName="Netaji Subash engineering collage"
-                        passoutYear = "2021 Aug - 2024 Jun"
-                        CGP = "8.32"
-                        />
-                </div>
             </div>
-            {/* <ScrollingFeatures 
-            trackingBall
-            
-            features={[
-                {
-                scrollingItem: ({ isIntersecting }) => (
-                    <SimpleExampleImageComponent
-                    isIntersecting={isIntersecting}
-                    imageUrl="https://placehold.co/800x500"
-                    />
-                ),
-                fixedItem: ({ isIntersecting }) => (
-                    <SimpleExampleTextComponent
-                    isIntersecting={isIntersecting}
-                    title="Deploma in Computer Science and Technolodgy"
-                    collageName="Siliguri Goverment Polytechnic"
-                    passoutYear = "2018 Jun - 2021 Jun"
-                    CGP = "7.7"
-                    />
-                ),
-                },
-                {
-                scrollingItem: ({ isIntersecting }) => (
-                    <SimpleExampleImageComponent
-                    isIntersecting={isIntersecting}
-                    imageUrl="https://placehold.co/800x500"
-                    />
-                ),
-                fixedItem: ({ isIntersecting }) => (
-                    <SimpleExampleTextComponent
-                    isIntersecting={isIntersecting}
-                    title="B tech in computer science and engineering"
-                    collageName="Netaji Subash engineering collage"
-                    passoutYear = "2021 Aug - 2024 Jun"
-                    CGP = "8.32"
-                    />
-                ),
-                },
-            ]}
-            /> */}
         </div>
      </div>
     </div>

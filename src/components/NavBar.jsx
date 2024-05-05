@@ -3,6 +3,7 @@ import { FaBars, FaTimes } from 'react-icons/fa'
 import { Link } from "react-scroll"
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import Home from './Home'
 
 const NavBar = () => {
 
@@ -30,38 +31,50 @@ const NavBar = () => {
             link: 'contact'
         }
     ]
+    // data-aos="fade-in" data-aos-duration="500"
     return (
-        <div data-aos="fade-in" data-aos-duration="500" className='flex justify-between items-center w-full h-20 px-4 text-white bg-gradient-to-b from-gray-800 to-black'>
-            <div className='flex flex-row gap-1 '>
-                <h3 className='text-4xl font-itim ml-4 max-sm:ml-0 max-sm:text-2xl'>CodeWithRahul</h3>
-            </div>
-
-            <ul className='hidden md:flex'>
-                {link.map(({ id, link }) => (
-
-                    <li key={id} className='px-4 cursor-pointer capitalize font-medium text-gray-200 hover:scale-105 duration-200'>
-                        <Link to={link} smooth={true} duration={500} spy={true} exact='true' offset={-80}>{link}</Link>
-                    </li>
-                ))}
-            </ul>
-
-            <div onClick={() => setNav(!nav)} className='md:hidden cursor-pointer pr-4 max-sm:pr-0 z-60'>
-                {nav ? <FaTimes size={20} /> : <FaBars size={20} />}
-            </div>
+        <div>
             {
-                nav && (
+                nav ? (
+                   <div className='text-white w-full px-7 mx-auto h-screen bg-gradient-to-b from-gray-800 to-black'>
+                        <div className='flex justify-between items-center '>
+                            <div className='flex flex-row gap-1 p-3'>
+                                <h3 className='text-4xl font-itim ml-4 max-sm:ml-0 max-sm:text-2xl'>CodeWithRahul</h3>
+                            </div>
+                            <div onClick={() => setNav(!nav)} className='md:hidden  cursor-pointer pr-4 max-sm:pr-0'>
+                                <FaTimes size={20}/>
+                            </div>
+                        </div>
+                        <ul className='flex items-center mt-5 flex-col gap-3 w-full'>
+                            {
+                                link.map( ({id,link}) => (
+                                    <li key={id} className='px-4 cursor-pointer capitalize font-medium text-gray-200 hover:scale-105 duration-200'>
+                                        <Link to={link} smooth={true} duration={500} spy={true} exact='true' offset={-80}>{link}</Link>
+                                    </li>
+                                ) )
+                            }
+                        </ul>
+                   </div>
+                ): (
+                    <div  className='flex justify-between items-center w-full h-20 px-4 text-white bg-gradient-to-b from-gray-800 to-black'>
+                        <div className='flex flex-row gap-1 '>
+                            <h3 className='text-4xl font-itim ml-4 max-sm:ml-0 max-sm:text-2xl'>CodeWithRahul</h3>
+                        </div>
 
-                    <ul className='flex z-50 flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-200'>
-                        <Link smooth={true} duration={500} spy={true} exact='true' offset={-80} className='absolute m-6 top-0 right-0 cursor-pointer' onClick={() => setNav(!nav)} to="home">
-                            <FaTimes size={30} />
-                        </Link> 
-                        {link.map(({ id, link }) => (
-                            <li className='px-4 cursor-pointer capitalize py-6 text-4xl '>
-                                <Link onClick={() => setNav(!nav)} to={link} smooth={true} duration={500} spy={true} exact='true' offset={-80}>{link}</Link>
-                            </li>
-                        ))}
+                        <ul className='hidden md:flex'>
+                            {link.map(({ id, link }) => (
 
-                    </ul>
+                                <li key={id} className='px-4 cursor-pointer capitalize font-medium text-gray-200 hover:scale-105 duration-200'>
+                                    <Link to={link} smooth={true} duration={500} spy={true} exact='true' offset={-80}>{link}</Link>
+                                </li>
+                            ))}
+                        </ul>
+            
+                        <div onClick={() => setNav(!nav)} className='md:hidden cursor-pointer pr-4 max-sm:pr-0'>
+                                <FaBars size={20}/>
+                        </div>
+       
+                    </div>
                 )
             }
         </div>

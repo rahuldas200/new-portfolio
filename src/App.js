@@ -12,10 +12,10 @@ import Education from './components/Education';
 
 function App() {
   return (
-    <div className='bg-black'>
+    <div className='bg-black relative'>
       <NavBar/>
       <Home/>
-      {/* <SocialLinks/> */}
+      <SocialLinks/>
       <About/>
       <Projects/>
       <Experience/>

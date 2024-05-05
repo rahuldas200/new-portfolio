@@ -9,7 +9,7 @@ import 'aos/dist/aos.css'
 
 const Projects = () => {
   useEffect(()=> {
-    AOS.init({duration: 1000})
+    AOS.init({duration: 100})
 })
 
   const Projects = () => [
@@ -69,7 +69,7 @@ const Projects = () => {
           {
             Projects().map(({ id, src, desc, demo, code }) => (
 
-              <div data-aos="fade-in" data-aos-duration="500" key={id} className='cart shadow-md shadow-gray-600 rounded-lg bg-[#ffffff86]'>
+              <div data-aos="zoom-in" data-aos-duration="500" key={id} className='cart shadow-md shadow-gray-600 rounded-lg bg-[#ffffff86]'>
                 <img src={src} alt="Ai" className='rounded-md duration-200 hover:scale-105'  />
                 <p className='p-2 text-justify font-extralight h-28 mt-3'>{desc}</p>
                 <div className='flex items-center justify-center'>
