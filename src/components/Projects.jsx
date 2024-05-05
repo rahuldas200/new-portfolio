@@ -17,7 +17,7 @@ const Projects = () => {
     {
       id: 1,
       src: qr,
-      desc: "Qr-restuarent is a qr-base food ordering system in restuarent,this website made using ReactJs, Tailwind CSS, Express.js, MongoDb, Socket.io and Redux. ",
+      desc: "Qr-Restaurant is a qr-base food ordering system in Restaurant.This is a ongoing project. This website made using ReactJs, Tailwind CSS, Express.js, MongoDb, Socket.io and Redux.",
       code: "https://github.com/rahuldas200/Qr-resturent.git"
     },
     {
