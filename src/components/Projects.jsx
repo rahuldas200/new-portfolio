@@ -4,6 +4,7 @@ import StudyNotion from '../assets/projects/Screenshot 2024-04-24 115951.png'
 import Tic from '../assets/projects/Tic.png'
 import weateher from '../assets/projects/Weather.7e8666695e66d7e2a96a.png'
 import Snake from '../assets/projects/Snake.png'
+import qr from '../assets/projects/Screenshot 2024-05-05 215226.png'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
@@ -15,8 +16,8 @@ const Projects = () => {
   const Projects = () => [
     {
       id: 1,
-      src: Tic,
-      desc: "Qr-restuarent is a qr-base food ordering system in restuarent,this website made using ReactJs, Tailwind CSS, Express.js, MongoDb, Socket.io and Redux ",
+      src: qr,
+      desc: "Qr-restuarent is a qr-base food ordering system in restuarent,this website made using ReactJs, Tailwind CSS, Express.js, MongoDb, Socket.io and Redux. ",
       code: "https://github.com/rahuldas200/Qr-resturent.git"
     },
     {
@@ -70,9 +71,11 @@ const Projects = () => {
             Projects().map(({ id, src, desc, demo, code }) => (
 
               <div data-aos="zoom-in" data-aos-duration="500" key={id} className='cart shadow-md shadow-gray-600 rounded-lg bg-[#ffffff86]'>
-                <img src={src} alt="Ai" className='rounded-md duration-200 hover:scale-105'  />
+                <div className='flex justify-center'>
+                  <img src={src} alt="Ai" className='rounded-md duration-200 hover:scale-105  object-cover max-h-32 '  />
+                </div>
                 <p className='p-2 text-justify font-extralight h-28 mt-3'>{desc}</p>
-                <div className='flex items-center justify-center'>
+                <div className='flex items-center justify-center mt-4'>
                   
                   <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105 bg-gradient-to-l from-gray-700 to-blue-900 rounded-md'>
                     <a href={demo} target='_blank'>Demo</a>
